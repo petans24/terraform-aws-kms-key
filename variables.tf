@@ -45,3 +45,9 @@ variable "multi_region" {
   default     = false
   description = "Indicates whether the KMS key is a multi-Region (true) or regional (false) key."
 }
+
+variable "prevent_destroy" {
+  type        = bool
+  default     = false
+  description = "This lifecycle option prevents Terraform from accidentally removing critical resources."
+}

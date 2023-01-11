@@ -8,6 +8,9 @@ resource "aws_kms_key" "default" {
   key_usage                = var.key_usage
   customer_master_key_spec = var.customer_master_key_spec
   multi_region             = var.multi_region
+  lifecycle {
+    prevent_destroy = var.prevent_destroy
+  }
 }
 
 resource "aws_kms_alias" "default" {
